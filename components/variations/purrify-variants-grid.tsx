@@ -6,42 +6,42 @@ const variants = [
     name: 'Lemeown',
     scent: 'Lemon',
     gradient: 'bg-gradient-to-b from-yellow-200 via-yellow-300 to-yellow-400',
-    image: '/yellow.png'
+    emoji: '🍋'
   },
   {
     color: 'blue',
     name: 'Meowgic Mist',
     scent: 'Cotton',
     gradient: 'bg-gradient-to-b from-sky-200 via-sky-300 to-sky-400',
-    image: '/blue.png'
+    emoji: '☁️'
   },
   {
     color: 'purple',
     name: 'Pawpple Blossom',
     scent: 'Lavender',
     gradient: 'bg-gradient-to-b from-violet-200 via-violet-300 to-violet-400',
-    image: '/purple.png'
+    emoji: '🌸'
   },
   {
     color: 'green',
     name: 'Purrsley',
     scent: 'Parsley',
     gradient: 'bg-gradient-to-b from-green-200 via-green-300 to-green-400',
-    image: '/green.png'
+    emoji: '🌿'
   },
   {
     color: 'pink',
     name: 'Strawpurry',
     scent: 'Strawberry',
     gradient: 'bg-gradient-to-b from-pink-200 via-pink-300 to-pink-400',
-    image: '/pink.png'
+    emoji: '🍓'
   },
   {
     color: 'orange',
     name: 'Whiskermelon',
     scent: 'Melon',
     gradient: 'bg-gradient-to-b from-orange-200 via-orange-300 to-orange-400',
-    image: '/orange.png'
+    emoji: '🍈'
   },
 ];
 
@@ -66,11 +66,9 @@ export function PurrifyVariantsGrid() {
               <div className={`${variant.gradient} shadow-lg rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl`}>
                 <div className="p-8 flex flex-col items-center">
                   <div className="relative w-48 h-48 flex items-center justify-center float-animation">
-                    <img
-                      src={variant.image}
-                      alt={`${variant.name} - ${variant.scent}`}
-                      className="w-40 h-40 object-contain drop-shadow-xl"
-                    />
+                    <div className="text-9xl drop-shadow-xl">
+                      {variant.emoji}
+                    </div>
                   </div>
 
                   <div className="mt-6 text-center bg-white/60 backdrop-blur-sm rounded-xl py-4 px-6 w-full">

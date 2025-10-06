@@ -1,29 +1,7 @@
-'use client';
-
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-
-const productVariants = [
-  { color: 'yellow', image: '/yellow.png', name: 'Lemeown' },
-  { color: 'blue', image: '/blue.png', name: 'Meowgic Mist' },
-  { color: 'purple', image: '/purple.png', name: 'Pawpple Blossom' },
-  { color: 'green', image: '/green.png', name: 'Purrsley' },
-  { color: 'pink', image: '/pink.png', name: 'Strawpurry' },
-  { color: 'orange', image: '/orange.png', name: 'Whiskermelon' },
-];
 
 export function HeroSection() {
-  const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentVariantIndex((prev) => (prev + 1) % productVariants.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative bg-gradient-to-br from-white via-[#F7F9FA] to-[#E8F1FA] min-h-[90vh] flex items-center overflow-hidden">
       {/* Background decorations */}
@@ -66,27 +44,13 @@ export function HeroSection() {
           {/* Product mockup */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-80 h-80 md:w-96 md:h-96">
+              {/* Placeholder for product image */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#A7C7E7] to-[#9EBFD9] rounded-full opacity-20 float-animation"></div>
-              <div className="absolute inset-8 bg-white rounded-2xl shadow-2xl flex items-center justify-center card-hover overflow-hidden">
-                <div className="relative w-full h-full flex items-center justify-center">
-                  {productVariants.map((variant, index) => (
-                    <div
-                      key={variant.color}
-                      className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000"
-                      style={{
-                        opacity: currentVariantIndex === index ? 1 : 0,
-                        pointerEvents: currentVariantIndex === index ? 'auto' : 'none',
-                      }}
-                    >
-                      <img
-                        src={variant.image}
-                        alt={variant.name}
-                        className="w-40 h-40 object-contain mb-4"
-                      />
-                      <p className="text-[#6B9DCB] font-semibold text-lg">{variant.name}</p>
-                      <p className="text-gray-500 text-sm">Purrify Stain Remover</p>
-                    </div>
-                  ))}
+              <div className="absolute inset-8 bg-white rounded-2xl shadow-2xl flex items-center justify-center card-hover">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🐱</div>
+                  <p className="text-[#6B9DCB] font-semibold text-lg">Purrify Stain Remover</p>
+                  <p className="text-gray-500 text-sm">Product mockup</p>
                 </div>
               </div>
               {/* Floating elements */}
