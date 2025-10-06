@@ -1002,6 +1002,9 @@ video {
 .h-px {
   height: 1px;
 }
+.h-40 {
+  height: 10rem;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -1107,6 +1110,9 @@ video {
 }
 .w-px {
   width: 1px;
+}
+.w-40 {
+  width: 10rem;
 }
 .min-w-0 {
   min-width: 0px;
